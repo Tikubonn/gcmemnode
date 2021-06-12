@@ -35,6 +35,15 @@ void free_gcmemnode (gcmemnode *gmnode){
   free(gmnode);
 }
 
+void free_gcmemnode_all (gcmemnode *gmnode){
+  gcmemnode *gmnd = gmnode;
+  while (gmnd != NULL){
+    gcmemnode *nextnode = gcmemnode_next(gmnd);
+    free_gcmemnode(gmnd);
+    gmnd = nextnode;
+  }
+}
+
 memnode *gcmemnode_memnode (gcmemnode *gmnode){
   return &(gmnode->memnode);
 }

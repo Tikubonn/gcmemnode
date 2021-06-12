@@ -21,6 +21,7 @@ gcmemnode *varname = &__ ## varname;
 extern void gcmemnode_init (void*, size_t, bitarray*, bitarray*, gcmemnode*, gcmemnode*);
 extern gcmemnode *make_gcmemnode (size_t, gcmemnode*);
 extern void free_gcmemnode (gcmemnode*);
+extern void free_gcmemnode_all (gcmemnode*);
 extern memnode *gcmemnode_memnode (gcmemnode*);
 extern gcmemnode *gcmemnode_next (gcmemnode*);
 extern int gcmemnode_gc_start (gcmemnode*);

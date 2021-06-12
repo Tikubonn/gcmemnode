@@ -96,7 +96,7 @@ static void test_make_gcmemnode (){
     char *data4 = memnode_allocate(3, gcmemnode_memnode(gmnode));
     TEST(data4 != NULL);
     TEST(data4 == data1);
-    free_gcmemnode(gmnode);
+    free_gcmemnode_all(gmnode);
   }
 }
 
